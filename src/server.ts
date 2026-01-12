@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 
+import auditsRouter from './routes/audit';
 import branchesRouter from './routes/branches';
 import itemsRouter from './routes/items';
 import storesRouter from './routes/stores';
@@ -25,6 +26,7 @@ app.use('/api', itemsRouter);
 app.use('/api', variantsRouter);
 app.use('/api', storesRouter);
 app.use('/api', branchesRouter);
+app.use('/api', auditsRouter);
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => { console.log(`Server running on port ${PORT}`); });

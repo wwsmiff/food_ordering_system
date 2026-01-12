@@ -8,13 +8,13 @@ import {Router} from 'express';
 
 const auditRouter = Router();
 
-auditRouter.get('/audits', listAudits);
-auditRouter.get('/audits/entity/:entityType/:entityId', getEntityAudits);
+auditRouter.get('/audit', listAudits);
+auditRouter.get('/audit/entity/:entityType/:entityId', getEntityAudits);
 
 // filter log by item
-auditRouter.get('/audits/item/:itemId', getItemAudits);
+auditRouter.get('/audit/item/:itemId', getItemAudits);
 
 // get variant history
-auditRouter.get('/audits/variant/:variantId', getVariantHistory);
+auditRouter.get('/audit/variant/:variantId', getVariantHistory);
 
 export default auditRouter;
