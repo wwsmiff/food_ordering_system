@@ -7,10 +7,6 @@ npm install
 npm run dev
 ```
 
-## Correct API Endpoints
-
-Mount all routers under `/api` (e.g., `app.use('/api', itemRouter)`).
-
 ### Audit Routes (audit.ts)
 - `GET /api/audit` - List recent audits
 - `GET /api/audit/entity/:entityType/:entityId` - Filter by entity (Item/Variant/Store/Branch)
