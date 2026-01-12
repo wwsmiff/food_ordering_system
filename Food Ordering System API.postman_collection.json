@@ -1,10 +1,11 @@
 {
 	"info": {
-		"_postman_id": "d8154587-a489-4482-a3f7-523c2d9166e9",
+		"_postman_id": "4936c37b-94a0-460a-82aa-933aaab68bd9",
 		"name": "Food Ordering System API",
 		"description": "Complete API collection for the Food Ordering System",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "22434455"
+		"_exporter_id": "51420492",
+		"_collection_link": "https://arnav0872-283917.postman.co/workspace/Arnav's-Workspace~4dfdd570-5a27-4314-894f-2a4d59a76a36/collection/51420492-4936c37b-94a0-460a-82aa-933aaab68bd9?action=share&source=collection_link&creator=51420492"
 	},
 	"item": [
 		{
@@ -44,7 +45,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -143,7 +144,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -219,7 +220,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -297,7 +298,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -393,7 +394,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -471,7 +472,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -528,7 +529,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"name\": \"Small Size\",\n  \"selling_price\": 150,\n  \"cost_price\": 100,\n  \"quantity\": 50,\n  \"properties\": {\n    \"size\": \"small\",\n    \"spice_level\": \"medium\"\n  }\n}"
+							"raw": "{\n  \"name\": \"Small Size\",\n  \"item_id\": \"123\",\n  \"selling_price\": 150,\n  \"cost_price\": 100,\n  \"quantity\": 50,\n  \"properties\": {\n    \"size\": \"small\",\n    \"spice_level\": \"medium\"\n  }\n}"
 						},
 						"url": {
 							"raw": "{{base_url}}/api/variant",
@@ -709,7 +710,7 @@
 							},
 							"status": "Created",
 							"code": 201,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -785,7 +786,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -863,7 +864,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -959,7 +960,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -1037,7 +1038,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -1136,7 +1137,7 @@
 							},
 							"status": "Created",
 							"code": 201,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -1212,7 +1213,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -1290,7 +1291,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -1386,7 +1387,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -1464,7 +1465,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",
@@ -1545,7 +1546,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "X-Powered-By",

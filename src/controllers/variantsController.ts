@@ -26,7 +26,8 @@ async function updateVariant(req: Request, res: Response) {
     return res.status(404).json({error : `Variant '${id}' not found`});
   }
 
-  const {name, selling_price, cost_price, quantity, properties} = req.body;
+  const {name, item_id, selling_price, cost_price, quantity, properties} =
+      req.body;
   if (name !== undefined && name !== originalVariant.name) {
     await Audit.create({
       entityType : 'Variant',
@@ -67,6 +68,16 @@ async function updateVariant(req: Request, res: Response) {
       newValue : quantity
     });
     originalVariant.quantity = quantity;
+  }
+  if (item_id !== undefined && item_id !== originalVariant.item_id) {
+    await Audit.create({
+      entityType : 'Variant',
+      entityId : id,
+      field : 'quantity',
+      oldValue : originalVariant.item_id,
+      newValue : item_id
+    });
+    originalVariant.item_id = item_id;
   }
   if (properties !== undefined &&
       JSON.stringify(properties) !==
@@ -117,6 +128,7 @@ async function deleteVariantById(req: Request, res: Response) {
     field : 'deleted',
     oldValue : {
       name : variant.name,
+      item_id : variant.item_id,
       selling_price : variant.selling_price,
       cost_price : variant.cost_price,
       quantity : variant.quantity,
