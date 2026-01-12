@@ -1,0 +1,1699 @@
+{
+	"info": {
+		"_postman_id": "d8154587-a489-4482-a3f7-523c2d9166e9",
+		"name": "Food Ordering System API",
+		"description": "Complete API collection for the Food Ordering System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22434455"
+	},
+	"item": [
+		{
+			"name": "Health",
+			"item": [
+				{
+					"name": "Server Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/health",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"health"
+							]
+						},
+						"description": "Check if the server is running"
+					},
+					"response": [
+						{
+							"name": "Server Health Check",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/health",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"health"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "20"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14-wyiv7eMm0KlvZvTHnEbYerZyB3E\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:47:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Server is running.\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Create Item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Biryani 2\",\n  \"brand\": \"Dum Biryani\",\n  \"category\": \"Main Course\",\n  \"product_code\": \"BIRYANI001\",\n  \"branch_id\": \"69647e23530c1012d1791a8f\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/item",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"item"
+							]
+						},
+						"description": "Create a new item"
+					},
+					"response": [
+						{
+							"name": "Create Item",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Biryani\",\n  \"brand\": \"Dum Biryani\",\n  \"category\": \"Main Course\",\n  \"product_code\": \"BIRYANI001\",\n  \"branch_id\": \"69647e23530c1012d1791a8f\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/item",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"item"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-W6yNmkD08NzXt+tUHcr18Dps5NY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:54:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Biryani\",\n    \"brand\": \"Dum Biryani\",\n    \"category\": \"Main Course\",\n    \"product_code\": \"BIRYANI001\",\n    \"branch_id\": \"69647e23530c1012d1791a8f\",\n    \"_id\": \"69647e85530c1012d1791a97\",\n    \"createdAt\": \"2026-01-12T04:54:29.548Z\",\n    \"updatedAt\": \"2026-01-12T04:54:29.548Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/item",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"item"
+							]
+						},
+						"description": "Get all items"
+					},
+					"response": [
+						{
+							"name": "Get All Items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/item",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"item"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "253"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fd-uuBhJYlYj79NRxmTJ230x1qdA8Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:54:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"69647e85530c1012d1791a97\",\n        \"name\": \"Biryani\",\n        \"brand\": \"Dum Biryani\",\n        \"category\": \"Main Course\",\n        \"product_code\": \"BIRYANI001\",\n        \"branch_id\": \"69647e23530c1012d1791a8f\",\n        \"createdAt\": \"2026-01-12T04:54:29.548Z\",\n        \"updatedAt\": \"2026-01-12T04:54:29.548Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Item by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/item/{{itemId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"{{itemId}}"
+							]
+						},
+						"description": "Get item by ID"
+					},
+					"response": [
+						{
+							"name": "Get Item by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/item/{{itemId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"item",
+										"{{itemId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-0WbxbuwGU1SjZDsJJgz/dq/sSA8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:55:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"69647e85530c1012d1791a97\",\n    \"name\": \"Biryani\",\n    \"brand\": \"Dum Biryani\",\n    \"category\": \"Main Course\",\n    \"product_code\": \"BIRYANI001\",\n    \"branch_id\": \"69647e23530c1012d1791a8f\",\n    \"createdAt\": \"2026-01-12T04:54:29.548Z\",\n    \"updatedAt\": \"2026-01-12T04:54:29.548Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Item",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Biryani Updated\",\n  \"brand\": \"Dum Biryani Premium\",\n  \"category\": \"Main Course\",\n  \"product_code\": \"BIRYANI001\",\n  \"branch_id\": \"branch_123\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/item/{{itemId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"{{itemId}}"
+							]
+						},
+						"description": "Update an item"
+					},
+					"response": [
+						{
+							"name": "Update Item",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Biryani Updated\",\n  \"brand\": \"Dum Biryani Premium\",\n  \"category\": \"Main Course\",\n  \"product_code\": \"BIRYANI001\",\n  \"branch_id\": \"branch_123\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/item/{{itemId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"item",
+										"{{itemId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "253"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fd-zSruoNbH7sGU9vTkJI2MFtfc6rg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:55:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"69647e85530c1012d1791a97\",\n    \"name\": \"Biryani Updated\",\n    \"brand\": \"Dum Biryani Premium\",\n    \"category\": \"Main Course\",\n    \"product_code\": \"BIRYANI001\",\n    \"branch_id\": \"branch_123\",\n    \"createdAt\": \"2026-01-12T04:54:29.548Z\",\n    \"updatedAt\": \"2026-01-12T04:55:36.077Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/item/{{itemId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"item",
+								"{{itemId}}"
+							]
+						},
+						"description": "Delete an item"
+					},
+					"response": [
+						{
+							"name": "Delete Item",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/item/{{itemId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"item",
+										"{{itemId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "282"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11a-QuksN88Kn/P0YYEHCDhAIYU7FYc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:56:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted\",\n    \"item\": {\n        \"_id\": \"69647e85530c1012d1791a97\",\n        \"name\": \"Biryani Updated\",\n        \"brand\": \"Dum Biryani Premium\",\n        \"category\": \"Main Course\",\n        \"product_code\": \"BIRYANI001\",\n        \"branch_id\": \"branch_123\",\n        \"createdAt\": \"2026-01-12T04:54:29.548Z\",\n        \"updatedAt\": \"2026-01-12T04:55:36.077Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Variants",
+			"item": [
+				{
+					"name": "Create Variant",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Small Size\",\n  \"selling_price\": 150,\n  \"cost_price\": 100,\n  \"quantity\": 50,\n  \"properties\": {\n    \"size\": \"small\",\n    \"spice_level\": \"medium\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/variant",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"variant"
+							]
+						},
+						"description": "Create a new variant"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Variants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/variant",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"variant"
+							]
+						},
+						"description": "Get all variants"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Variant by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/variant/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"variant",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "variant_id_here"
+								}
+							]
+						},
+						"description": "Get variant by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Variant",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Medium Size\",\n  \"selling_price\": 200,\n  \"cost_price\": 130,\n  \"quantity\": 75,\n  \"properties\": {\n    \"size\": \"medium\",\n    \"spice_level\": \"high\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/variant/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"variant",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "variant_id_here"
+								}
+							]
+						},
+						"description": "Update a variant"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Variant",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/variant/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"variant",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "variant_id_here"
+								}
+							]
+						},
+						"description": "Delete a variant"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "Create Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Downtowns 2 Store\",\n  \"branch_id\": \"branch_123\",\n  \"location\": \"123 Main Street\",\n  \"owner_id\": \"owner_456\",\n  \"status\": \"active\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/store",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"store"
+							]
+						},
+						"description": "Create a new store"
+					},
+					"response": [
+						{
+							"name": "Create Store",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Downtown Store\",\n  \"branch_id\": \"branch_123\",\n  \"location\": \"123 Main Street\",\n  \"owner_id\": \"owner_456\",\n  \"status\": \"active\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/store",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"store"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a1-tlmbf/rCwnpTCRlDI8qPs+UjvQI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:48:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Downtown Store\",\n    \"branch_id\": \"branch_123\",\n    \"location\": \"123 Main Street\",\n    \"owner_id\": \"owner_456\",\n    \"status\": \"active\",\n    \"_id\": \"69647d09530c1012d1791a6b\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Stores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/store",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"store"
+							]
+						},
+						"description": "Get all stores"
+					},
+					"response": [
+						{
+							"name": "Get All Stores",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/store",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"store"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a3-Ko1NOGVWKRyMGFPqyQxFB2x/lXY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:48:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"69647d09530c1012d1791a6b\",\n        \"name\": \"Downtown Store\",\n        \"branch_id\": \"branch_123\",\n        \"location\": \"123 Main Street\",\n        \"owner_id\": \"owner_456\",\n        \"status\": \"active\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Store by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/store/{{storeId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"store",
+								"{{storeId}}"
+							]
+						},
+						"description": "Get store by ID"
+					},
+					"response": [
+						{
+							"name": "Get Store by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/store/{{storeId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"store",
+										"{{storeId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a1-ur+s//PFKqCfBvQVApuBvHrxA/k\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:48:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"69647d09530c1012d1791a6b\",\n    \"name\": \"Downtown Store\",\n    \"branch_id\": \"branch_123\",\n    \"location\": \"123 Main Street\",\n    \"owner_id\": \"owner_456\",\n    \"status\": \"active\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Store",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Downtown Store Updated\",\n  \"branch_id\": \"branch_123\",\n  \"location\": \"456 Main Street\",\n  \"owner_id\": \"owner_456\",\n  \"status\": \"active\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/store/{{storeId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"store",
+								"{{storeId}}"
+							]
+						},
+						"description": "Update a store"
+					},
+					"response": [
+						{
+							"name": "Update Store",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Downtown Store Updated\",\n  \"branch_id\": \"branch_123\",\n  \"location\": \"456 Main Street\",\n  \"owner_id\": \"owner_456\",\n  \"status\": \"active\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/store/{{storeId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"store",
+										"{{storeId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a9-CoiepHJov8e3UFyzbTsHZWH6BKA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:49:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"69647d09530c1012d1791a6b\",\n    \"name\": \"Downtown Store Updated\",\n    \"branch_id\": \"branch_123\",\n    \"location\": \"456 Main Street\",\n    \"owner_id\": \"owner_456\",\n    \"status\": \"active\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Store",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/store/{{storeId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"store",
+								"{{storeId}}"
+							]
+						},
+						"description": "Delete a store"
+					},
+					"response": [
+						{
+							"name": "Delete Store",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/store/{{storeId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"store",
+										"{{storeId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "199"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c7-2nWuvrVdx1lgOS5DhAAS4y7NFIM\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:50:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted\",\n    \"store\": {\n        \"_id\": \"69647d09530c1012d1791a6b\",\n        \"name\": \"Downtown Store Updated\",\n        \"branch_id\": \"branch_123\",\n        \"location\": \"456 Main Street\",\n        \"owner_id\": \"owner_456\",\n        \"status\": \"active\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Branches",
+			"item": [
+				{
+					"name": "Create Branch",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"North Branch 2\",\n  \"store_id\": \"69647d76530c1012d1791a7b\",\n  \"location\": \"789 North Avenue\",\n  \"manager_id\": \"manager_789\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/branch",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"branch"
+							]
+						},
+						"description": "Create a new branch"
+					},
+					"response": [
+						{
+							"name": "Create Branch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"North Branch\",\n  \"store_id\": \"69647d76530c1012d1791a7b\",\n  \"location\": \"789 North Avenue\",\n  \"manager_id\": \"manager_789\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/branch",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"branch"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9f-cZOgLLUpJuXlS09CrsRzhvLzY18\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:51:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"North Branch\",\n    \"store_id\": \"69647d76530c1012d1791a7b\",\n    \"location\": \"789 North Avenue\",\n    \"manager_id\": \"manager_789\",\n    \"_id\": \"69647dbf530c1012d1791a81\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Branches",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/branch",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"branch"
+							]
+						},
+						"description": "Get all branches"
+					},
+					"response": [
+						{
+							"name": "Get All Branches",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/branch",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"branch"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a1-9jnOH0z8d29CCwEjbROUDoUHMLA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:51:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"69647dbf530c1012d1791a81\",\n        \"name\": \"North Branch\",\n        \"store_id\": \"69647d76530c1012d1791a7b\",\n        \"location\": \"789 North Avenue\",\n        \"manager_id\": \"manager_789\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Branch by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/branch/{{branchId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"branch",
+								"{{branchId}}"
+							]
+						},
+						"description": "Get branch by ID"
+					},
+					"response": [
+						{
+							"name": "Get Branch by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/branch/{{branchId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"branch",
+										"{{branchId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9f-+pMkDco6/Y1XixV2eo4IxUPujxE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:51:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"69647dbf530c1012d1791a81\",\n    \"name\": \"North Branch\",\n    \"store_id\": \"69647d76530c1012d1791a7b\",\n    \"location\": \"789 North Avenue\",\n    \"manager_id\": \"manager_789\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Branch",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"North Branch Updated\",\n  \"store_id\": \"store_123\",\n  \"location\": \"999 North Avenue\",\n  \"manager_id\": \"manager_789\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/branch/{{branchId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"branch",
+								"{{branchId}}"
+							]
+						},
+						"description": "Update a branch"
+					},
+					"response": [
+						{
+							"name": "Update Branch",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"North Branch Updated\",\n  \"store_id\": \"store_123\",\n  \"location\": \"999 North Avenue\",\n  \"manager_id\": \"manager_789\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/branch/{{branchId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"branch",
+										"{{branchId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"98-woKozeEYSziemV8eo/CTymAH3Gg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:52:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"69647dbf530c1012d1791a81\",\n    \"name\": \"North Branch Updated\",\n    \"store_id\": \"store_123\",\n    \"location\": \"999 North Avenue\",\n    \"manager_id\": \"manager_789\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Branch",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/branch/{{branchId}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"branch",
+								"{{branchId}}"
+							]
+						},
+						"description": "Delete a branch"
+					},
+					"response": [
+						{
+							"name": "Delete Branch",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/branch/{{branchId}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"branch",
+										"{{branchId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-VluKGOPcZNLrq9J7fjM+T/GWKNQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:53:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted\",\n    \"branch\": {\n        \"_id\": \"69647dbf530c1012d1791a81\",\n        \"name\": \"North Branch Updated\",\n        \"store_id\": \"store_123\",\n        \"location\": \"999 North Avenue\",\n        \"manager_id\": \"manager_789\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Audit",
+			"item": [
+				{
+					"name": "List All Audits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/audit",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"audit"
+							]
+						},
+						"description": "Get all audit logs"
+					},
+					"response": [
+						{
+							"name": "List All Audits",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/audit",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"audit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2754"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ac2-FbM/0QfheoSksBomNlkHmrJNiQA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 04:57:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"69647ec8530c1012d1791aa0\",\n        \"entityType\": \"Item\",\n        \"entityId\": \"69647e85530c1012d1791a97\",\n        \"field\": \"branch_id\",\n        \"oldValue\": \"69647e23530c1012d1791a8f\",\n        \"newValue\": \"branch_123\",\n        \"timestamp\": \"2026-01-12T04:55:36.072Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647ec8530c1012d1791a9e\",\n        \"entityType\": \"Item\",\n        \"entityId\": \"69647e85530c1012d1791a97\",\n        \"field\": \"brand\",\n        \"oldValue\": \"Dum Biryani\",\n        \"newValue\": \"Dum Biryani Premium\",\n        \"timestamp\": \"2026-01-12T04:55:36.067Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647ec8530c1012d1791a9c\",\n        \"entityType\": \"Item\",\n        \"entityId\": \"69647e85530c1012d1791a97\",\n        \"field\": \"name\",\n        \"oldValue\": \"Biryani\",\n        \"newValue\": \"Biryani Updated\",\n        \"timestamp\": \"2026-01-12T04:55:36.061Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647e31530c1012d1791a92\",\n        \"entityType\": \"Branch\",\n        \"entityId\": \"69647dbf530c1012d1791a81\",\n        \"field\": \"deleted\",\n        \"oldValue\": {\n            \"name\": \"North Branch Updated\",\n            \"store_id\": \"store_123\",\n            \"location\": \"999 North Avenue\",\n            \"manager_id\": \"manager_789\"\n        },\n        \"newValue\": null,\n        \"timestamp\": \"2026-01-12T04:53:05.114Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647e0b530c1012d1791a8a\",\n        \"entityType\": \"Branch\",\n        \"entityId\": \"69647dbf530c1012d1791a81\",\n        \"field\": \"location\",\n        \"oldValue\": \"789 North Avenue\",\n        \"newValue\": \"999 North Avenue\",\n        \"timestamp\": \"2026-01-12T04:52:27.124Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647e0b530c1012d1791a88\",\n        \"entityType\": \"Branch\",\n        \"entityId\": \"69647dbf530c1012d1791a81\",\n        \"field\": \"store_id\",\n        \"oldValue\": \"69647d76530c1012d1791a7b\",\n        \"newValue\": \"store_123\",\n        \"timestamp\": \"2026-01-12T04:52:27.118Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647e0b530c1012d1791a86\",\n        \"entityType\": \"Branch\",\n        \"entityId\": \"69647dbf530c1012d1791a81\",\n        \"field\": \"name\",\n        \"oldValue\": \"North Branch\",\n        \"newValue\": \"North Branch Updated\",\n        \"timestamp\": \"2026-01-12T04:52:27.110Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647d83530c1012d1791a7e\",\n        \"entityType\": \"Store\",\n        \"entityId\": \"69647d09530c1012d1791a6b\",\n        \"field\": \"deleted\",\n        \"oldValue\": {\n            \"name\": \"Downtown Store Updated\",\n            \"branch_id\": \"branch_123\",\n            \"location\": \"456 Main Street\",\n            \"owner_id\": \"owner_456\",\n            \"status\": \"active\"\n        },\n        \"newValue\": null,\n        \"timestamp\": \"2026-01-12T04:50:11.482Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647d65530c1012d1791a78\",\n        \"entityType\": \"Store\",\n        \"entityId\": \"69647d09530c1012d1791a6b\",\n        \"field\": \"status\",\n        \"oldValue\": \"inactive\",\n        \"newValue\": \"active\",\n        \"timestamp\": \"2026-01-12T04:49:41.530Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647d59530c1012d1791a74\",\n        \"entityType\": \"Store\",\n        \"entityId\": \"69647d09530c1012d1791a6b\",\n        \"field\": \"status\",\n        \"oldValue\": \"active\",\n        \"newValue\": \"inactive\",\n        \"timestamp\": \"2026-01-12T04:49:29.530Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647d59530c1012d1791a72\",\n        \"entityType\": \"Store\",\n        \"entityId\": \"69647d09530c1012d1791a6b\",\n        \"field\": \"location\",\n        \"oldValue\": \"123 Main Street\",\n        \"newValue\": \"456 Main Street\",\n        \"timestamp\": \"2026-01-12T04:49:29.524Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"69647d59530c1012d1791a70\",\n        \"entityType\": \"Store\",\n        \"entityId\": \"69647d09530c1012d1791a6b\",\n        \"field\": \"name\",\n        \"oldValue\": \"Downtown Store\",\n        \"newValue\": \"Downtown Store Updated\",\n        \"timestamp\": \"2026-01-12T04:49:29.516Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Entity Audits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/audit/entity/:entityType/:entityId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"audit",
+								"entity",
+								":entityType",
+								":entityId"
+							],
+							"variable": [
+								{
+									"key": "entityType",
+									"value": "Item"
+								},
+								{
+									"key": "entityId",
+									"value": "item_id_here"
+								}
+							]
+						},
+						"description": "Get audit logs for a specific entity (Item, Variant, Store, Branch)"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Item Audits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/audit/item/:itemId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"audit",
+								"item",
+								":itemId"
+							],
+							"variable": [
+								{
+									"key": "itemId",
+									"value": "item_id_here"
+								}
+							]
+						},
+						"description": "Get audit logs filtered by item"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Variant History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/audit/variant/:variantId",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"audit",
+								"variant",
+								":variantId"
+							],
+							"variable": [
+								{
+									"key": "variantId",
+									"value": "variant_id_here"
+								}
+							]
+						},
+						"description": "Get variant history from audit logs"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "storeId",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "storeId",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "itemId",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
