@@ -1,9 +1,8 @@
 import {Document, model, models, Schema} from 'mongoose';
 
-interface IAudit extends Document {
+export interface IAudit extends Document {
   entityType: string;
-  entityId: Schema.Types.ObjectId;
-  userId: string;
+  entityId: string;
   field: string;
   oldValue: any;
   newValue: any;
@@ -11,13 +10,13 @@ interface IAudit extends Document {
 }
 
 const AuditSchema = new Schema<IAudit>({
-  entityType : String,
-  entityId : Schema.Types.ObjectId,
-  userId : String,
-  field : String,
+  entityType : {type : String, required : true},
+  entityId : {type : String, required : true},
+  field : {type : String, required : true},
   oldValue : Schema.Types.Mixed,
   newValue : Schema.Types.Mixed,
   timestamp : {type : Date, default : Date.now}
 });
 
-export const Audit = model('Audit', AuditSchema);
+const Audit = models.Audit || model<IAudit>('Audit', AuditSchema);
+export default Audit;
